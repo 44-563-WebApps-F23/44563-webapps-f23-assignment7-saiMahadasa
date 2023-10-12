@@ -6,103 +6,83 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Find the treasure by Sai Subrahmanyam</title>
   <style>
-    body {
-      font-family:sans-serif;
-      
-    }
+    
     .flex-container{
-        background-color: aquamarine;
-    justify-content: space-around;
     display: flex;
-    align-items: center;
     }
     
-    #locations ,  #penalty, #help , .helpClick {
-    cursor: pointer;
-    background: #abc7df;
-    padding: 10px;
-    margin-bottom: 25px;
+    #locations ,  #penalty, #help , .click {
+    background: #022442;
+    padding: 20px;
+    color: white;
     }
 
-    .myflex-container {
+    .flex-container {
         display: flex;
-        align-items: center;
   }
 
-  .img-style {
-    width: 70px;
-    height: 70px; 
-    border: 3px solid #3b3535;
+  .img-game {
+    width: 60px;
+    height: 60px; 
+    border: 1px solid #3b3535;
   }
-
-
-   
   </style>
 </head>
-
 <body>
- 
     <h1>Find the treasure by Sai Subrahmanyam</h1>
-  
     <p>Click on the locations to search for treasure, beware the traps.</p>
     <div class="flex-container">
-
     <div id="locations">
       Number of locations checked is zero.
     </div>
-
     <div id="penalty">
-      Penalty is zero.
+      Penalty : 0
     </div>
-
-    <p class="helpClick">Click for help.</p>
-
+    <p onclick="help()" id="click-for-help" class="click">Click for help.</p>
     <div id="help">
       Help report.
     </div>
     </div>
 
-    <div class="myflex-container">
-        <img class="img-style" src="images/image1.jpg" alt="Starting Location">
-        <img class="img-style" src="images/image1.jpg" alt="Starting Location">
-        <img class="img-style" src="images/image1.jpg" alt="Starting Location">
-        <img class="img-style" src="images/image1.jpg" alt="Starting Location">
-        <img class="img-style" src="images/image1.jpg" alt="Starting Location">
+    <div class="game-container">
+        <img id="id1" class="img-game" src="images/image1.jpg"  onclick="check(0)" alt="Location">
+        <img id="id2" class="img-game" src="images/image1.jpg"  onclick="check(1)" alt="Location">
+        <img id="id3" class="img-game" src="images/image1.jpg"  onclick="check(2)" alt="Location">
+        <img id="id4" class="img-game" src="images/image1.jpg"  onclick="check(3)" alt="Location">
+        <img id="id5" class="img-game" src="images/image1.jpg"  onclick="check(4)" alt="Location">
     </div>
-    <div class="myflex-container">
-        <img class="img-style" src="images/image1.jpg" alt="Starting Location">
-        <img class="img-style" src="images/image1.jpg" alt="Starting Location">
-        <img class="img-style" src="images/image1.jpg" alt="Starting Location">
-        <img class="img-style" src="images/image1.jpg" alt="Starting Location">
-        <img class="img-style" src="images/image1.jpg" alt="Starting Location">
+    <div class="game-container">
+        <img id="id6" class="img-game" src="images/image1.jpg"  onclick="check(5)" alt="Location">
+        <img id="id7" class="img-game" src="images/image1.jpg"  onclick="check(6)" alt="Location">
+        <img id="id8" class="img-game" src="images/image1.jpg"  onclick="check(7)" alt="Location">
+        <img id="id9" class="img-game" src="images/image1.jpg"  onclick="check(8)" alt="Location">
+        <img id="id10" class="img-game" src="images/image1.jpg"  onclick="check(9)" alt="Location">
     </div>
-    <div class="myflex-container">
-        <img class="img-style" src="images/image1.jpg" alt="Starting Location">
-        <img class="img-style" src="images/image1.jpg" alt="Starting Location">
-        <img class="img-style" src="images/image1.jpg" alt="Starting Location">
-        <img class="img-style" src="images/image1.jpg" alt="Starting Location">
-        <img class="img-style" src="images/image1.jpg" alt="Starting Location">
+    <div class="game-container">
+        <img id="id11" class="img-game" src="images/image1.jpg"  onclick="check(10)" alt="Location">
+        <img id="id12" class="img-game" src="images/image1.jpg"  onclick="check(11)" alt="Location">
+        <img id="id13" class="img-game" src="images/image1.jpg"  onclick="check(12)" alt="Location">
+        <img id="id14" class="img-game" src="images/image1.jpg"  onclick="check(13)" alt="Location">
+        <img id="id15" class="img-game" src="images/image1.jpg"  onclick="check(14)" alt="Location">
     </div>
-    <div class="myflex-container">
-        <img class="img-style" src="images/image1.jpg" alt="Starting Location">
-        <img class="img-style" src="images/image1.jpg" alt="Starting Location">
-        <img class="img-style" src="images/image1.jpg" alt="Starting Location">
-        <img class="img-style" src="images/image1.jpg" alt="Starting Location">
-        <img class="img-style" src="images/image1.jpg" alt="Starting Location">
+    <div class="game-container">
+        <img id="id16" class="img-game" src="images/image1.jpg"  onclick="check(15)" alt="Location">
+        <img id="id17" class="img-game" src="images/image1.jpg"  onclick="check(16)" alt="Location">
+        <img id="id18" class="img-game" src="images/image1.jpg"  onclick="check(17)" alt="Location">
+        <img id="id19" class="img-game" src="images/image1.jpg"  onclick="check(18)" alt="Location">
+        <img id="id20" class="img-game" src="images/image1.jpg"  onclick="check(19)" alt="Location">
     </div>
-    <div class="myflex-container">
-        <img class="img-style" src="images/image1.jpg" alt="Starting Location">
-        <img class="img-style" src="images/image1.jpg" alt="Starting Location">
-        <img class="img-style" src="images/image1.jpg" alt="Starting Location">
-        <img class="img-style" src="images/image1.jpg" alt="Starting Location">
-        <img class="img-style" src="images/image1.jpg" alt="Starting Location">
+    <div class="game-container">
+        <img id="id21" class="img-game" src="images/image1.jpg"  onclick="check(20)" alt="Location">
+        <img id="id22" class="img-game" src="images/image1.jpg"  onclick="check(21)" alt="Location">
+        <img id="id23" class="img-game" src="images/image1.jpg"  onclick="check(22)" alt="Location">
+        <img id="id24" class="img-game" src="images/image1.jpg"  onclick="check(23)" alt="Location">
+        <img id="id25" class="img-game" src="images/image1.jpg"  onclick="check(24)" alt="Location">
     </div>
-    
     
       </div>
 
-
-
 </body>
+<script src="./js/penalty_script.js"></script>
 
 </html>
