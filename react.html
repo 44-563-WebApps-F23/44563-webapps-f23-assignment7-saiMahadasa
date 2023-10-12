@@ -2,41 +2,25 @@
 <html>
 <head>
   <title>Sai Subrahmanyam Speed Check</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </head>
 <body>
+    <div class="container">
   <h1>Sai Subrahmanyam Speed Check</h1>
 
   <div id="target">Your time : </div>
   <div id="counter">Count : </div>
 
-  <button onclick="startTimer()">Start Timer</button>
-  <button onclick="recordTime()">React</button>
+  <button class="btn btn-primary" onclick="startTimer()">Start Timer</button>
+  <button class="btn btn-success" onclick="recordTime()">React</button>
+  <br/>
 
-  <script>
-
-  let reactTime = undefined;
-  let countdownVal = 3;  
-
-  function recordTime() {
-    reactTime = Date.now();
-    console.log(`Reaction time recorded is : ${reactTime} ` );
-  }
-
-  function startTimer() {
-    let counterElement = document.getElementById('counter');
-    counterElement.textContent = 'Count: ' + countdownVal;
-
-    let countdownInterval = setInterval(function() {
-      countdownVal--;
-      counterElement.textContent = 'Count: ' + countdownVal;
-
-      if (countdownVal === 0) {
-        clearInterval(countdownInterval);
-        counterElement.textContent = 'Count Time is up';
-      }
-    }, 1000);
-  }
-</script>
-  </script>
+</div>
 </body>
+<script src="./js/react_script.js"></script>
 </html>
