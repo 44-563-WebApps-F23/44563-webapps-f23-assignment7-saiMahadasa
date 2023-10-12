@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sai Subrahmanyam Speed Check</title>
+</head>
+<body>
+  <h1>Sai Subrahmanyam Speed Check</h1>
+
+  <div id="target">Your time : </div>
+  <div id="counter">Count : </div>
+
+  <button onclick="startTimer()">Start Timer</button>
+  <button onclick="recordTime()">React</button>
+
+  <script>
+
+  let reactTime = undefined;
+  let countdownVal = 3;  
+
+  function recordTime() {
+    reactTime = Date.now();
+    console.log(`Reaction time recorded is : ${reactTime} ` );
+  }
+
+  function startTimer() {
+    let counterElement = document.getElementById('counter');
+    counterElement.textContent = 'Count: ' + countdownVal;
+
+    let countdownInterval = setInterval(function() {
+      countdownVal--;
+      counterElement.textContent = 'Count: ' + countdownVal;
+
+      if (countdownVal === 0) {
+        clearInterval(countdownInterval);
+        counterElement.textContent = 'Count Time is up';
+      }
+    }, 1000);
+  }
+</script>
+  </script>
+</body>
+</html>
